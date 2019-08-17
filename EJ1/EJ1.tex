@@ -25,3 +25,53 @@ De forma an\'aloga se obtienen los par\'ametros para el segundo cuadripolo \todo
     y_{B21} = -\frac{1}{\frac{1}{R_3 \cdot C_1 \cdot C_2 \cdot s} + \frac{1}{C_1 \cdot s} + \frac{1}{C_2 \cdot s}}\\
     y_{B22} = \frac{\frac{1}{R_3 \cdot C_1 \cdot s} + 1}{\frac{1}{R_3 \cdot C_1 \cdot C_2 \cdot s} + \frac{1}{C_1 \cdot s} + \frac{1}{C_2 \cdot s}}
 \end{align}
+
+Se observa que la condici\'on de Brune para cuadripolos en paralelo se cumple, y en consecuencia, se obtienen los par\'ametros admitancia del cuadripolo total mediante la suma de sus dos componentes.
+Dado que el objetivo final es calcular $\frac{V_o}{V_i}$, como tal cociente solo depende de los par\'ametros $y_{21}$ y $y_{22}$, s\'olo se mostrar\'a el c\'alculo de estos.
+Luego de trabajo algebr\'aico, se llega a la siguiente expresi\'on:
+
+\begin{equation}
+    H(s) = \frac{V_o}{V_i} = -\frac{y_{A21} + y_{B21}}{y_{A22} + y_{B22}} = \\
+\end{equation}
+
+\begin{equation} 
+    \label{eqn: Complete transfer function}
+    = \frac{R_1 \cdot R_2 \cdot R_3 \cdot C_1 \cdot C_2 \cdot C_3 \cdot s^3 + \left(R_1 + R_2\right) \cdot R_3 \cdot C_1 \cdot C_2 \cdot s^2 + R_3 \cdot \left(C_1 +C_2\right) \cdot s + 1}
+    {R_1 \cdot R_2 \cdot R_3 \cdot C_1 \cdot C_2 \cdot C_3 \cdot s^3 + \left(\left(R_1 + R_2\right) \cdot R_3 \cdot C_1 \cdot C_2 + R_1 \cdot R_3 \cdot C_1 \cdot C_3 + R_1 \cdot \left(R_2 + R_3\right) \cdot C_2 \cdot C_3\right) \cdot s^2 + R_3 \cdot \left(C_1 +C_2\right) \cdot s + 1}
+\end{equation}
+
+Si se pide que $R_1 = R_2 = 2 \cdot R_3$ y $C_1 = C_2 = \frac{C_3}{2}$ se lleva la expresi\'on de la ecuaci\'on \ref{eqn: Complete transfer function} a:
+\begin{equation} 
+    \label{eqn: Notch transfer function}
+    H(s) = \frac{R_3^2 \cdot C_3^2 \cdot s^2 + 1}{R_3^2 \cdot C_3^2 \cdot s^2 + 4 \cdot R_3 \cdot C_3 \cdot s + 1}
+\end{equation}
+
+Se pide que $f_0 = 2,7 KHz$
+\begin{equation}
+    \implies \omega_0 =  16,965 \cdot 10^3 \frac{rad}{s}
+\end{equation}
+
+De la ecuaci\'on \ref{eqn: Notch transfer function} se obtiene que:
+\begin{equation}
+    \omega_0^2 = \frac{1}{R_3^2 \cdot C_3^2} \implies \omega_0 = \frac{1}{R_3 \cdot C_3}
+\end{equation}
+
+Debe buscarse alguna combinaci\'on de $R_3$ y $C_3$ que me d\'e $\approx 0,058946 ms$.
+La mejor combinaci\'on con valores comerciales es 15 y 39, ya que $15 \cdot 39 = 585$ (luego se corrige el \'orden).
+Para la elecci\'on de los componentes se tuvo en cuenta que el \'orden de magnitud de los capacitores sea tal que permita despreciar la capacidad par\'asita de las puntas del osciloscopio, y que adm\'as haya disponibilidad de los componentes en el pa\~nol de la universidad.
+Quedan as\'i determinados tambi\'en los valores de $R_1, R_2, C_1$ y $C_2$:
+\begin{align}
+    \label{eqn: Selection of components}
+    R_3 = 1,5 K\Omega \implies R_1 = R_2 = 2 \cdot R_3 = 3 K\Omega \longrightarrow $Elijo  $ R_1 = R_2 = 3,3 K\Omega \\
+    C_3 = 39 nF \implies C_1 = C_2 = \frac{C_3}{2} = 19,5 nF \longrightarrow $Elijo  $ C_1 = C_2 = 18 nF
+\end{align}
+
+Se consider\'o tambi\'en utilizar dos resisencias en serie y dos capacitores en paralelo para lograr exactamente las relaciones indicadas.
+Sin embargo, la opci\'on fue descartada por duplicar costo de componentes y, si bien mejora lo esperado en valores nominales, llega a duplicar las tolerancias de las resistencias y capacitores formados por dos componentes.
+Consecuentemente, la variaci\'on obtenida en la pr\'actica puede ser a\'un m\'as alejada de los valores esperados.
+Finalmente, y como criterio definitivo, se recalcul\'o la variaci\'on de lo esperado al utilizar componentes que no respetan estr\'ictamente la relaci\'on de doble o mitad.
+Utilizando la funci\'on transferencia de la ecuaci\'on \ref{eqn: Complete transfer function}, se observa que el coeficiente de grado 3 ser\'a:
+\begin{equation}
+    R_1 \cdot R_2 \cdot R_3 \cdot C_1 \cdot C_2 \cdot C_3 = 
+\end{equation}
+
