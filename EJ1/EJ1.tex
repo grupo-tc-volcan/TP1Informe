@@ -1,3 +1,27 @@
+
+
 \section{Ejercicio 1: Filtro notch pasivo}
 \subsection{C\'alculo te\'orico}
-Para el c\'alculo te\'orico se consider\'o al circuito como dos cuadripolos en paralelo, de los cuales se obtuvieron sus par\'ametros admitancia
+Para el c\'alculo te\'orico se consider\'o al circuito como dos cuadripolos en paralelo, de los cuales se obtuvieron sus par\'ametros admitancia.
+El primero de los cuadripolos es el presentado en la figura \todo[inline]{INSERT REFERENCE TO FIGURE Q1}.
+\missingfigure{First quadrupole circuit}
+El c\'alculo de los par\'ametros viene facilitado por la simpleza del circuito y el hecho de ser rec\'iproco, de forma que sus par\'ametros admitancia son:
+
+\begin{align}
+    \label{eqn: Admittance parameters first quadrupole.}
+    y_{A11} = \left. \frac{I_1}{V_1} \right\rvert_{V_2=0} = \frac{1}{R_1 + \frac{R_2}{R_2 \cdot C_3 \cdot s + 1}} = \frac{R_2 \cdot C_3 \cdot s + 1}{R_1 \cdot R_2 \cdot C_3 \cdot s + \left(R_1+R_2\right)} \\
+    y_{A12} = \left. \frac{I_1}{V_2} \right\rvert_{V_1=0} = \frac{-I_2 \cdot \frac{1}{R_1 \cdot C_3 \cdot s + 1}}{I_2 \cdot \left(R_2 + \frac{R_1}{R_1 \cdot C_3 \cdot s + 1}\right)} = -\frac{1}{R_1 \cdot R_2 \cdot C_3 \cdot s + \left(R_1+R_2\right)}\\
+    y_{A21} = \left. \frac{I_2}{V_1} \right\rvert_{V_2=0} = -\frac{1}{R_1 \cdot R_2 \cdot C_3 \cdot s + \left(R_1+R_2\right)}\\
+    y_{A22} = \left. \frac{I_2}{V_2} \right\rvert_{V_1=0} = \frac{R_1 \cdot C_3 \cdot s + 1}{R_1 \cdot R_2 \cdot C_3 \cdot s + \left(R_1+R_2\right)}
+\end{align}
+
+De forma an\'aloga se obtienen los par\'ametros para el segundo cuadripolo \todo[inline]{INSERT REFERENCE TO FIGURE Q2}, bas\'andose en los c\'alculos del primero, y tomando provecho de su similitud.
+\missingfigure{Second quadrupole circuit}
+
+\begin{align}
+    \label{eqn: Admittance parameters second quadrupole.}
+    y_{B11} = \frac{\frac{1}{R_3 \cdot C_2 \cdot s} + 1}{\frac{1}{R_3 \cdot C_1 \cdot C_2 \cdot s} + \frac{1}{C_1 \cdot s} + \frac{1}{C_2 \cdot s}} \\
+    y_{B12} = -\frac{1}{\frac{1}{R_3 \cdot C_1 \cdot C_2 \cdot s} + \frac{1}{C_1 \cdot s} + \frac{1}{C_2 \cdot s}}\\
+    y_{B21} = -\frac{1}{\frac{1}{R_3 \cdot C_1 \cdot C_2 \cdot s} + \frac{1}{C_1 \cdot s} + \frac{1}{C_2 \cdot s}}\\
+    y_{B22} = \frac{\frac{1}{R_3 \cdot C_1 \cdot s} + 1}{\frac{1}{R_3 \cdot C_1 \cdot C_2 \cdot s} + \frac{1}{C_1 \cdot s} + \frac{1}{C_2 \cdot s}}
+\end{align}
