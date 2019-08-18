@@ -61,16 +61,10 @@ Debe buscarse alguna combinaci\'on de $R_3$ y $C_3$ que me d\'e $\approx 0,05894
 La mejor combinaci\'on con valores comerciales es 15 y 39, ya que $15 \cdot 39 = 585$ (luego se corrige el \'orden).
 Para la elecci\'on de los componentes se tuvo en cuenta que el \'orden de magnitud de los capacitores sea tal que permita despreciar la capacidad par\'asita de las puntas del osciloscopio, y que adm\'as haya disponibilidad de los componentes en el pa\~nol de la universidad.
 Quedan as\'i determinados tambi\'en los valores de $R_1, R_2, C_1$ y $C_2$:
-%\begin{align}
-%    \label{eqn: Selection of components}
-%    R_3 = 1,5 K\Omega \implies R_1 = R_2 = 2 \cdot R_3 = 3 K\Omega \longrightarrow $Elijo  $ R_1 = R_2 = 3,3 K\Omega \\
-%    C_3 = 39 nF \implies C_1 = C_2 = \frac{C_3}{2} = 19,5 nF \longrightarrow $Elijo  $ C_1 = C_2 = 18 nF
-%\end{align}
 \begin{align}
 	\label{eqn: Selection of components}
-	R_3 = 1,5 K\Omega \implies R_1 = R_2 = 2 \cdot R_3 = 3 K\Omega \longrightarrow
-	Elijo  R_1 = R_2 = 3,3 K\Omega \\C_3 = 39 nF \implies C_1 = C_2 = \frac{C_3}{2} = 19,5 nF \longrightarrow
-	Elijo  C_1 = C_2 = 18 nF
+    R_3 = 1,5 K\Omega \implies R_1 = R_2 = 2 \cdot R_3 = 3 K\Omega \longrightarrow \textrm{ Elijo  } R_1 = R_2 = 3,3 K\Omega \\
+    C_3 = 39 nF \implies C_1 = C_2 = \frac{C_3}{2} = 19,5 nF \longrightarrow \textrm{ Elijo  } C_1 = C_2 = 18 nF
 \end{align}
 
 Se consider\'o tambi\'en utilizar dos resisencias en serie y dos capacitores en paralelo para lograr exactamente las relaciones indicadas.
@@ -126,12 +120,8 @@ Antitransformando por Laplace se obtiene que la respuesta al escal\'on es:
 \end{equation}
 
 En la cual se puede observar que tendr\'a un m\'inimo. El mismo se obtiene derivando la expresi\'on \ref{eqn: Theoretical response to Heaviside} e igualando a 0:
-%\begin{align}
-%    y'(t) = 5248,5 \cdot \exp{-4545,35 \cdot t} - 73104,6 \cdot \exp{63310,8 \cdot t} + \delta(t) $     para$ t>0 \\
-%    y'(t) = 0 \iff t \approx 45 \mu s
-%\end{align}
 \begin{align}
-    y'(t) = 5248,5 \cdot \exp{-4545,35 \cdot t} - 73104,6 \cdot \exp{63310,8 \cdot t} + \delta(t)      para t>0 \\
+    y'(t) = 5248,5 \cdot \exp{-4545,35 \cdot t} - 73104,6 \cdot \exp{63310,8 \cdot t} + \delta(t)\textrm{      para t>0} \\
     y'(t) = 0 \iff t \approx 45 \mu s
 \end{align}
 
