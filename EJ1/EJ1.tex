@@ -137,4 +137,36 @@ El segundo (figura \todo[inline]{REF TO TRANS CIRCUIT}), para obtener la respues
 
 
 
-\subsection{Resultados experimentales y comparaci\'on con te\'oricos y sumulados}
+\subsection{Resultados experimentales y comparaci\'on con te\'oricos y simulados}
+El llevado a la pr\'actica y medici\'on del circuito se realiz\'o a trav\'es de la impresión en PCB del mismo, para el cual se tomaron ciertos criterios explicados a continuación.
+El circuito se alojó en una placa de 5x5cm, simple faz, dado que la simpleza del mismo no ameritaba el uso de dos capas.
+Podría argumentarse que el tamaño ex excesivo y sobrado para la aplicación, y se estaría en lo correcto.
+Sin embargo, se utilizaron las medidas mencionadas ya que son las mínimas disponibles en el pañol de la universidad.
+Por otro lado, el cortar la placa habría supuesto un sobretrabajo innecesario. \\
+Se colocaron alojamientos para 4 pines a izquierda y derecha de la placa, para la señal de entrada y salida, respectivamente, tratando de mantener también, la simetría visual del circuito.
+De los cuatro pines, solo los dos en los extremos fueron utilizados, quitándose los del medio para lograr mayor separación y prevenirse contra cortocircuitos debidos a la cercanía de los pines.
+La conexión con pines se eligió por sobre borneras para facilitar la conexión al generador de señales y a las puntas del osciloscopio.\\
+En cuanto a las pistas, se procuró que no formasen ángulos de 90° o más agudos, afín de evitar señales parásitas por emisión de ondas electromagnéticas.
+Debido también a la disponibilidad de espacio, se le dio a las mismas un ancho de 0,9 mm, facilitando la circulación de corriente.\\
+Finalmente, del lado de la placa sin cobre, se imprimieron las indicaciones de los componentes y los puertos, para facilitar su uso.
+Teniendo en cuenta todo esto, el resultado fue el siguiente circuito:
+\begin{figure}[h]
+    \centering
+    \begin{minipage}{\textwidth}
+        \centering
+        \includegraphics[width=0.7\textwidth]{./EJ1/PCB.png}
+        \caption{PCB diseñado en el programa Altium Designer.}
+        \label{fig: PCB_Altium}
+    \end{minipage}\hfill
+\end{figure}
+
+
+
+
+\subsubsection{Comparación de las curvas}
+\missingfigure{COMBINATION OF 3 GRAPHS FOR AMPLITUDE BODE}
+\todo[inline]{SHORT ANALYSIS OF THE GRAPH}
+\missingfigure{COMINATION OF 3 GRAPHS FOR PHASE BODE}
+\todo[inline]{SHORT ANALYSIS OF THE GRAPH}
+\missingfigure{COMBINATION OF 3 GRAPHS FOR RESPONSE TO HEAVISIDE}
+\todo[inline]{SHORT ANALYSIS OF THE GRAPH}
