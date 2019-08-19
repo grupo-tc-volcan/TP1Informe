@@ -1,11 +1,10 @@
-
-
 \section{Ejercicio 1: Filtro notch pasivo}
 \subsection{C\'alculo te\'orico}
 \subsubsection{Dise\~no de los componentes}
 Para el c\'alculo te\'orico se consider\'o al circuito como dos cuadripolos en paralelo, de los cuales se obtuvieron sus par\'ametros admitancia.
-El primero de los cuadripolos es el presentado en la figura \todo[inline]{INSERT REFERENCE TO FIGURE Q1}.
-\missingfigure{First quadrupole circuit}
+El primero de los cuadripolos es el presentado en la figura \ref{fig: First Quadrupole}.
+\input{EJ1/first_quadrupole.asc.tex}
+
 El c\'alculo de los par\'ametros viene facilitado por la simpleza del circuito y el hecho de ser rec\'iproco, de forma que sus par\'ametros admitancia son:
 
 \begin{align}
@@ -16,8 +15,8 @@ El c\'alculo de los par\'ametros viene facilitado por la simpleza del circuito y
     y_{A22} = \left. \frac{I_2}{V_2} \right\rvert_{V_1=0} = \frac{R_1 \cdot C_3 \cdot s + 1}{R_1 \cdot R_2 \cdot C_3 \cdot s + \left(R_1+R_2\right)}
 \end{align}
 
-De forma an\'aloga se obtienen los par\'ametros para el segundo cuadripolo \todo[inline]{INSERT REFERENCE TO FIGURE Q2}, bas\'andose en los c\'alculos del primero, y tomando provecho de su similitud.
-\missingfigure{Second quadrupole circuit}
+De forma an\'aloga se obtienen los par\'ametros para el segundo cuadripolo \ref{fig: Second Quadrupole}, bas\'andose en los c\'alculos del primero, y tomando provecho de su similitud.
+\input{EJ1/second_quadrupole.asc.tex}
 
 \begin{align}
     \label{eqn: Admittance parameters second quadrupole.}
