@@ -58,7 +58,7 @@ De la ecuaci\'on \ref{eqn: Notch transfer function} se obtiene que:
 
 Debe buscarse alguna combinaci\'on de $R_3$ y $C_3$ que me d\'e $\approx 0,058946 ms$.
 La mejor combinaci\'on con valores comerciales es 15 y 39, ya que $15 \cdot 39 = 585$ (luego se corrige el \'orden).
-Para la elecci\'on de los componentes se tuvo en cuenta que el \'orden de magnitud de los capacitores sea tal que permita despreciar la capacidad par\'asita de las puntas del osciloscopio, y que adm\'as haya disponibilidad de los componentes en el pa\~nol de la universidad.
+Para la elecci\'on de los componentes se tuvo en cuenta que el \'orden de magnitud de los capacitores sea tal que permita despreciar la capacidad par\'asita de las puntas del osciloscopio, y que adem\'as haya disponibilidad de los componentes en el pa\~nol de la universidad.
 Quedan as\'i determinados tambi\'en los valores de $R_1, R_2, C_1$ y $C_2$:
 \begin{align}
 	\label{eqn: Selection of components}
@@ -81,7 +81,7 @@ Por lo tanto, se admite el error.
 
 
 \subsubsection{Caracterizaci\'on del sistema}
-Tomando de la expres\'o de la ecuaci\'on \ref{eqn: Notch transfer function}, queda expresada la funci\'on transferencia como:
+Tomando de la expresi\'on de la ecuaci\'on \ref{eqn: Notch transfer function}, queda expresada la funci\'on transferencia como:
 \begin{equation}
     \label{eqn: Theoretical transfer function with numbers}
     H(s) = \frac{3,475 \cdot 10^{-9} s^2 + 1}{3,475 \cdot 10^{-9} s^2 + 2,358 \cdot 10^{-4} \cdot s + 1}
@@ -95,7 +95,7 @@ Para obtener la respuesta al impulso, se expresa la ecuaci\'on \ref{eqn: Theoret
 Y se antitransforma por Laplace:
 \begin{equation}
     \label{eqn: Theoretical impulse response}
-    h(t) = 5248,5 \cdot \exp{-4545,35 \cdot t} \cdot u(t) - 73104,6 \cdot \exp{63310,8 \cdot t} \cdot u(t) + \delta(t)
+    h(t) = 5248,5 \cdot e^{-4545,35 \cdot t} \cdot u(t) - 73104,6 \cdot e^{-63310,8 \cdot t} \cdot u(t) + \delta(t)
 \end{equation}
 
 Dado que el sistema es LTI, causal y BIBO-estable, se puede obtener la respuesta en frecuencia realizando el reemplazo $s = j \cdot 2\pi \cdot f$ en la ecuac\'on \ref{eqn: Theoretical transfer function with numbers}:
@@ -109,18 +109,18 @@ Dado que el sistema es LTI, causal y BIBO-estable, se puede obtener la respuesta
 \subsubsection{Respuesta al escal\'on}
 Para la obtenci\'on de la respuesta al escal\'on, se realizar\'a primero el producto de la funci\'on transferencia con la transformada de Laplace del escal\'on:
 \begin{equation}
-    H(s) \cdot U(s) = \frac{1,155}{s+63310,8} -  - \frac{1,155}{s+4545,35} + \frac{1}{s}
+    H(s) \cdot U(s) = \frac{1,155}{s+63310,8} - \frac{1,155}{s+4545,35} + \frac{1}{s}
 \end{equation} 
 
 Antitransformando por Laplace se obtiene que la respuesta al escal\'on es:
 \begin{equation}
     \label{eqn: Theoretical response to Heaviside}
-    y(t) = 1,155 \cdot \exp{63310,8 \cdot t} \cdot u(t) + 1,155 \cdot \exp{-4545,35 \cdot t} \cdot u(t) + u(t)
+    y(t) = 1,155 \cdot e^{-63310,8 \cdot t} \cdot u(t) + 1,155 \cdot e^{-4545,35 \cdot t} \cdot u(t) + u(t)
 \end{equation}
 
 En la cual se puede observar que tendr\'a un m\'inimo. El mismo se obtiene derivando la expresi\'on \ref{eqn: Theoretical response to Heaviside} e igualando a 0:
 \begin{align}
-    y'(t) = 5248,5 \cdot \exp{-4545,35 \cdot t} - 73104,6 \cdot \exp{63310,8 \cdot t} + \delta(t)\textrm{      para t>0} \\
+    y'(t) = 5248,5 \cdot e^{-4545,35 \cdot t} - 73104,6 \cdot e^{-63310,8 \cdot t} + \delta(t)\textrm{      para t>0} \\
     y'(t) = 0 \iff t \approx 45 \mu s
 \end{align}
 
@@ -128,11 +128,27 @@ En la cual se puede observar que tendr\'a un m\'inimo. El mismo se obtiene deriv
 
 \subsection{Simulaci\'on en LTspice}
 Para la simulaci\'on del circuito se realizaron dos an\'alisis, ambos del tipo Monte Carlo.
-El primero (figura \todo[inline]{REF TO AC ANALYSIS CIRCUIT}), para obtener la respuesta en frecuencia, se logr\'o mediante la herramienta AC Analysis.
-El segundo (figura \todo[inline]{REF TO TRANS CIRCUIT}), para obtener la respuesta al escal\'on, se realiz\'o utilizando la herramienta Transient.
+El primero (figura \ref{fig: LTspice Bode}), para obtener la respuesta en frecuencia, se logr\'o mediante la herramienta AC Analysis.
+El segundo (figura \ref{fig: LTspice Escalon}), para obtener la respuesta al escal\'on, se realiz\'o utilizando la herramienta Transient.
 
-\missingfigure{AC ANALYSIS CIRCUIT}
-\missingfigure{TRANS CIRCUIT}
+\begin{figure}[h!]
+    \begin{minipage}{\textwidth}
+        \centering
+        \includegraphics[width=0.9\textwidth]{EJ1/Bode LTspice.png}
+        \caption{Circuito en LTspice para simulaci\'on del bode.}
+         \label{fig: LTspice Bode}
+    \end{minipage}\hfill
+\end{figure}
+\begin{figure}[h!]
+    \begin{minipage}{\textwidth}
+        \centering
+        \includegraphics[width=0.8\textwidth]{EJ1/Respuesta al escalon LTspice.png}
+        \caption{Circuito en LTspice para simulaci\'on de la respuesta al escalon.}
+         \label{fig: LTspice Escalon}
+    \end{minipage}\hfill
+\end{figure}
+
+\newpage
 
 
 
