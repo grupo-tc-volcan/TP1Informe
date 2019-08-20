@@ -22,54 +22,61 @@ Dado que los valores de ambos componentes son comerciales y estandarizados, sele
 
 Una vez seleccionados los componentes se arm\'o el circuito y se lo someti\'o a una se\~nal cuadrada (cuyo valor medio es nulo) de $10V_{pp}$ a una frecuencia dada de $8kHz$ con la siguiente respuesta medida en osciloscopio.
 
-\begin{figure}[h!]
+\begin{figure}[H]
     \centering
-    \includegraphics[width=0.9\textwidth]{EJ2_respuesta_a_cuadrada.png}
+    \includegraphics[width=0.9\textwidth]{./EJ2/EJ2_respuesta_a_cuadrada.png}
     \caption{Respuesta a una se\~nal cuadrada}
     \label{fig:rtacuad_2} 
 \end{figure}
 
-En la figura \ref{fig:rtacuad_2} se puede observar una forma curva en los flancos ascendientes y descendientes de la respuesta del sistema a la se\~nal cuadrada (curva resaltada en celeste). Esto se debe principalmente a los intervalos de carga y descarga del capacitor, ante la inversi\'on de polaridad en sus bornes, obteniendo ese efecto de "suavizaci\'on". Adem\'as, desde el punto de vista espectral podemos apreciar una atenuaci\'on en los arm\'onicos altos que componen la se\~nal cuadrada, debido a que esta entrada est\'a pasando por un filtro pasa-bajos. Esto tambi\'en contribuye en la distorsi\'on en la forma de la se\~nal.
+En la figura \ref{fig: rtacuad_2} se puede observar una forma curva en los flancos ascendientes y descendientes de la respuesta del sistema a la se\~nal cuadrada (curva resaltada en celeste). Esto se debe principalmente a los intervalos de carga y descarga del capacitor, ante la inversi\'on de polaridad en sus bornes, obteniendo ese efecto de "suavizaci\'on". Adem\'as, desde el punto de vista espectral podemos apreciar una atenuaci\'on en los arm\'onicos altos que componen la se\~nal cuadrada, debido a que esta entrada est\'a pasando por un filtro pasa-bajos. Esto tambi\'en contribuye en la distorsi\'on en la forma de la se\~nal.
 
 \subsection{Respuesta en frecuencia}
 
 Para confeccionar la respuesta en frecuencia del filtro se realizo un barrido en frecuencia de la entrada, midiendo a la salida la relaci\'on entre amplitudes y la fase. Luego se volcaron esos datos a una hoja de c\'alculo y se obtuvieron dos gr\'aficos que representan cada una de esas caracter\'isticas.
 
-\begin{figure}[h!]
-    \centering
-    \includegraphics[width=0.9\textwidth]{EJ2_BODE_amp_medido.png}
-    \caption{Diagrama BODE de amplitud medido}
-    \label{fig:bode_amp_medido_2} 
-\end{figure}
+%\begin{figure}[H]
+ %   \centering
+ %   \includegraphics[width=0.9\textwidth]{./EJ2/EJ2_BODE_amp_medido.png}
+ %   \caption{Diagrama BODE de amplitud medido}
+ %   \label{fig: bode_amp_medido_2} 
+%\end{figure}
 
 
-\begin{figure}[h!]
-    \centering
-    \includegraphics[width=0.9\textwidth]{EJ2_BODE_fase_medido.png}
-    \caption{Diagrama BODE de fase medido}
-    \label{fig:bode_fase_medido_2} 
-\end{figure}
+%\begin{figure}[H]
+ %   \centering
+ %   \includegraphics[width=0.9\textwidth]{./EJ2/EJ2_BODE_fase_medido.png}
+ %   \caption{Diagrama BODE de fase medido}
+ %   \label{fig: bode_fase_medido_2} 
+%\end{figure}
 
 La frecuencia de corte "real" del circuito fue obtenida usando el osciloscopio, variando la frecuencia hasta encontrar un desfase de $-45°$ entre entrada y salida. Seg\'un la figura \ref{fig:phase_2}, en este caso $f_{0}=15,57kHz$
 
 
-\begin{figure}[h!]
+\begin{figure}[H]
     \centering
-    \includegraphics[width=0.9\textwidth]{EJ2_fase_osc.png}
+    \includegraphics[width=0.9\textwidth]{./EJ2/EJ2_fase_osc.png}
     \caption{Medici\'on de frecuencia de corte}
     \label{fig:phase_2} 
 \end{figure}
 Adem\'as, el diagrama BODE resultante de las mediciones es compatible con el an\'alisis te\'orico sobre el filtro.
 
-Por otro lado, se desarroll\'o en serie de Fourier la se\~nal de entrada de tal forma de encontrar las componentes de frecuencia que componen a dicha se\~nal. Usando los coeficientes de Fourier podemos observar la presencia de cada uno de los arm\'onicos, y se superpuso esta informaci\'on con el gr\'afico BODE de amplitud teórico.
+Por otro lado, se desarroll\'o en serie de Fourier la se\~nal de entrada de tal forma de encontrar las componentes de frecuencia que componen a dicha se\~nal. Usando los coeficientes de Fourier podemos observar la presencia de cada uno de los arm\'onicos (son todos impares), y se superpuso esta informaci\'on con el gr\'afico BODE de amplitud teórico.
 
-De esta forma, y calculando la funci\'on transferencia para cada arm\'onico, se observa que a frecuencias altas la baja amplitud de los arm\'onicos combinado con el bajo valor de la funci\'on transferencia nos permiten despreciar la presencia de dichos arm\'onicos.
+De esta forma, y calculando la funci\'on transferencia para sucesivos arm\'onicos, se observa que a frecuencias altas la baja amplitud de los arm\'onicos combinado con el bajo valor de la funci\'on transferencia nos permiten despreciar la presencia de dichos arm\'onicos.
 
-\begin{figure}[h!]
+\begin{figure}[H]
     \centering
-    \includegraphics[width=0.9\textwidth]{EJ2_BODE_teorico.png}
-    \caption{Diagrama BODE te\'orico y amplitud de arm\'onicos de entrada}
+    \includegraphics[width=0.9\textwidth]{./EJ2/EJ2_BODE_teorico.png}
+    \caption{Diagrama BODE de amplitud te\'orico y medido y amplitud de arm\'onicos de entrada}
     \label{fig:bode_amp_superp_2} 
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.9\textwidth]{./EJ2/EJ2_fase_BODE.png}
+    \caption{Diagrama BODE de fase te\'orico y medido}
+    \label{fig:bode_phase_superp_2} 
 \end{figure}
 
 \subsection{Comportamiento en alta frecuencia}
@@ -79,20 +86,20 @@ Si sometemos el circuito a una frecuencia moderadamente alta comparada con la fr
     H(s)=\frac{1}{S}
 \end{equation}
 
-Lo que en transformada de Laplace implicar\'ia la integraci\'on de la se\~nal de entrada. Para comprobar esto forzamos al circuito en la pr\'actica a una frecuencia $f=250kHz$ seg\'un la figura \ref{fig:altafrec_2}. De este gr\'afico podemos resaltar que la se\~nal cuadrada de entrada resulta en una se\~nal de tipo triangular en la salida, confirmando la suposici\'on te\'orica planteada anteriormente.
+Lo que en transformada de Laplace implicar\'ia la integraci\'on de la se\~nal de entrada. Para comprobar esto forzamos al circuito en la pr\'actica a una frecuencia $f=250kHz$ seg\'un la figura \ref{fig: altafrec_2}. De este gr\'afico podemos resaltar que la se\~nal cuadrada de entrada resulta en una se\~nal de tipo triangular en la salida, confirmando la suposici\'on te\'orica planteada anteriormente.
 
-\begin{figure}[h!]
+\begin{figure}[H]
     \centering
-    \includegraphics[width=0.9\textwidth]{EJ2_integrador.png}
+    \includegraphics[width=0.9\textwidth]{./EJ2/EJ2_integrador.png}
     \caption{Respuesta a 250kHz}
     \label{fig:altafrec_2} 
 \end{figure}
 
  Si ahora probamos una frecuencia mucho mayor (en este caso $10MHz$) observamos una atenuaci\'on de la se\~nal de salida considerable, lo que produce que la salida sea susceptible de ser afectada por el ruido, como se puede ver en la figura \ref{fig:noise_2}.
  
- \begin{figure}[h!]
+ \begin{figure}[H]
     \centering
-    \includegraphics[width=0.9\textwidth]{EJ2_rta_alta_frec.png}
+    \includegraphics[width=0.9\textwidth]{./EJ2/EJ2_rta_alta_frec.png}
     \caption{Respuesta a 10MHz}
     \label{fig:noise_2}
 \end{figure}
@@ -101,10 +108,10 @@ Lo que en transformada de Laplace implicar\'ia la integraci\'on de la se\~nal de
 
 Se conect\'o la entrada del circuito a una se\~nal cuadrada de similares caracter\'isticas que la primera, pero esta vez a una frecuencia de $160Hz$. Se midi\'o con osciloscopio la respuesta del circuito y se obtuvo la figura \ref{fig:160hz_2}. En ella podemos observar una atenuaci\'on casi nula de la salida (representada en color celeste) respecto de la entrada, asi como una fase pr\'acticamente nula. Esto se condice con el an\'alisis te\'orico que se puede realizar, dado que el t\'ermino que involucra a la frecuencia en la ecuaci\'on \ref{ganancia_2} se vuelve despreciable, con lo cual la funci\'on transferencia tiende al valor unitario.
 
-\begin{figure}[h!]
+\begin{figure}[H]
     \centering
-    \includegraphics[width=0.9\textwidth]{EJ2_rta_160hz.png}
+    \includegraphics[width=0.9\textwidth]{./EJ2/EJ2_rta_160hz.png}
     \caption{Respuesta a $160Hz$}
-    \label{fig:160hz_2} 
+    \label{fig: 160hz_2} 
 \end{figure}
 
