@@ -1,6 +1,6 @@
 \section{Ejercicio 1: Filtro notch pasivo}
 \subsection{C\'alculo te\'orico}
-\subsubsection{Dise\~no de los componentes}
+\subsubsection{Dise\~no de los componentes} \label{sec: Components design}
 Para el c\'alculo te\'orico se consider\'o al circuito como dos cuadripolos en paralelo, de los cuales se obtuvieron sus par\'ametros admitancia.
 El primero de los cuadripolos es el presentado en la figura \ref{fig: First Quadrupole}.
 \input{EJ1/first_quadrupole.asc.tex}
@@ -106,7 +106,7 @@ Dado que el sistema es LTI, causal y BIBO-estable, se puede obtener la respuesta
 
 
 
-\subsubsection{Respuesta al escal\'on}
+\subsubsection{Respuesta al escal\'on} \label{sec: Response to step}
 Para la obtenci\'on de la respuesta al escal\'on, se realizar\'a primero el producto de la funci\'on transferencia con la transformada de Laplace del escal\'on:
 \begin{equation}
     H(s) \cdot U(s) = \frac{1,155}{s+63310,8} - \frac{1,155}{s+4545,35} + \frac{1}{s}
@@ -134,7 +134,7 @@ El segundo (figura \ref{fig: LTspice Escalon}), para obtener la respuesta al esc
 \begin{figure}[H]
     \begin{minipage}{\textwidth}
         \centering
-        \includegraphics[width=0.9\textwidth]{EJ1/Bode LTspice.png}
+        \includegraphics[width=\textwidth]{EJ1/Bode LTspice.png}
         \caption{Circuito en LTspice para simulaci\'on del bode.}
          \label{fig: LTspice Bode}
     \end{minipage}\hfill
@@ -142,7 +142,7 @@ El segundo (figura \ref{fig: LTspice Escalon}), para obtener la respuesta al esc
 \begin{figure}[H]
     \begin{minipage}{\textwidth}
         \centering
-        \includegraphics[width=0.8\textwidth]{EJ1/Respuesta al escalon LTspice.png}
+        \includegraphics[width=\textwidth]{EJ1/Respuesta al escalon LTspice.png}
         \caption{Circuito en LTspice para simulaci\'on de la respuesta al escalon.}
          \label{fig: LTspice Escalon}
     \end{minipage}\hfill
@@ -163,7 +163,7 @@ En cuanto a las pistas, se procur\'o que no formasen \'angulos de 90° o m\'as a
 Debido tambi\'en a la disponibilidad de espacio, se le dio a las mismas un ancho de 0,9 mm, facilitando la circulaci\'on de corriente.\\
 Finalmente, del lado de la placa sin cobre, se imprimieron las indicaciones de los componentes y los puertos, para facilitar su uso.
 Teniendo en cuenta todo esto, el resultado fue el siguiente circuito:
-\begin{figure}[h]
+\begin{figure}[H]
     \centering
     \begin{minipage}{\textwidth}
         \centering
@@ -177,9 +177,46 @@ Teniendo en cuenta todo esto, el resultado fue el siguiente circuito:
 
 
 \subsubsection{Comparaci\'on de las curvas}
-\missingfigure{COMBINATION OF 3 GRAPHS FOR AMPLITUDE BODE}
-\todo[inline]{SHORT ANALYSIS OF THE GRAPH}
-\missingfigure{COMINATION OF 3 GRAPHS FOR PHASE BODE}
-\todo[inline]{SHORT ANALYSIS OF THE GRAPH}
-\missingfigure{COMBINATION OF 3 GRAPHS FOR RESPONSE TO HEAVISIDE}
-\todo[inline]{SHORT ANALYSIS OF THE GRAPH}
+En los siguientes gráficos se mostrarán superpuestas las curvas teóricas (obtenidas a través de la función transferencia), prácticas (de las mediciones obtenidas con la placa), y las simuladas con el Monte Carlo (mediante el uso de LTspice).
+Por limitaciones de la capacidad del programa graficador, y afín de facilitar su comprensión visual, solo se graficaron 18 curvas representativas de las obtenidas del análisis Monte Carlo.
+\begin{figure}[H]
+    \centering
+    \begin{minipage}{\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{EJ1/Bode_Amp_EJ1.png}
+        \caption{Comparaci\'on entre curvas teórica, simulada y práctica del bode de amplitud.}
+        \label{fig: Amplitude Bode}
+    \end{minipage}\hfill
+\end{figure}
+Se puede apreciar una similitud aceptable entre los valores esperados en la teoría con aquellos observados en la práctica.
+La principal diferencia yace en que en los valores teóricos sí puede hablarse de mínimos ideales y asíntoticos, mientras que la práctica fija valores reales que limitan tales efectos.
+Sin embargo, ambas curvas se encuentran dentro de los rangos pautados por el Monte Carlo, dándo la pauta de que las mediciones obtenidas se adecúan a los márgenes de tolerancias establecidos.
+Las mediciones ubicaron a la frecuencia de mayor atenuación en los $2,83 KHz$ (con $-33dB$ de atenuación).
+Si se contrasta este valor con la frecuencia de corte teórica corregida ($2,81 KHz$, que tiene en cuenta los valores comerciale de los componentes, ver \ref{sec: Components design}), se obiene un muy bajo porcentaje de error, de apenas $0,7\%$.
+Además, al compararse con la frecencia de corte solicitada de $2,7 KHz$, el error es aceptable y de valor $4,82\%$.
+
+\begin{figure}[H]
+    \centering
+    \begin{minipage}{\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{EJ1/Bode_Phase_EJ1.png}
+        \caption{Comparaci\'on entre curvas teórica, simulada y práctica del bode de fase.}
+        \label{fig: Phase Bode}
+    \end{minipage}\hfill
+\end{figure}
+El bode de fase es tal vez donde se observe la mayor diferencia entre los valores teóricos contra los experimentales o simulados.
+La continuidad de la gráfica teórica contrasta con la variabilidad de la curva medida, e incluso con el Monte Carlo.
+De todas maneras, es comprensible tal comportamiento, ya que la zona indicada es justamente la de mayor pendiente en la variación de la fase y, por lo tanto, la de mayor variabilidad.
+
+\begin{figure}[H]
+    \centering
+    \begin{minipage}{\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{EJ1/Resp_al_escalon_EJ1.png}
+        \caption{Comparaci\'on entre curvas teórica, simulada y práctica de la respuesta al escalón.}
+        \label{fig: Response to step}
+    \end{minipage}\hfill
+\end{figure}
+Finalmente, en el análisis de la respuesta al escalón, la curva teórica y práctica se encuentran en concordancia para la mayor parte de la curva, y ambas dentro de lo esperado por la simulación.
+El estudio de las curvas nos hace analizar el punto caracterísitico donde las mismas llegan a un mínimo.
+Como se mencionó en la sección \ref{sec: Response to step}, se espera que tal mínimo se encuentre pasados los $45\mu s$, que, al ser comparado con el valor práctico ($41\mu s$), fija un error aceptable de $9,76\%$.
