@@ -61,7 +61,20 @@ Dado que los valores de ambos componentes son comerciales y estandarizados, sele
 \end{figure}
 \quad \quad Adem\'as, se puede ver que el diagrama de BODE resultante de las mediciones es compatible con el an\'alisis te\'orico sobre el filtro.
 
-\quad \quad Por otro lado, se desarroll\'o en serie de Fourier la se\~nal de entrada con el fin de encontrar las componentes de frecuencia que componen a dicha se\~nal. Usando los coeficientes de Fourier podemos observar la presencia de cada uno de los arm\'onicos (son todos impares), y se superpuso esta informaci\'on con el gr\'afico de amplitud del diagrama de BODE teórico. De esta forma, y calculando la funci\'on transferencia para sucesivos arm\'onicos, se observa que a frecuencias altas la baja amplitud de los arm\'onicos combinado con el bajo valor de la funci\'on transferencia nos permiten despreciar la presencia de dichos arm\'onicos.
+\quad \quad Por otro lado, se desarroll\'o en serie de Fourier la se\~nal de entrada con el fin de encontrar las componentes de frecuencia que componen a dicha se\~nal:
+
+\begin{equation}
+    x(t) = a_{0} + \sum_{n=1}^{\infty}a_{n}.cos(\frac{2.\pi.n.t}{T}) + b_{n}.sin(\frac{2.\pi.n.t}{T}) 
+\end{equation}
+
+Realizando los c\'alculos necesarios se llega a que $a_{n} = a_{0} = 0$ y a
+
+\begin{equation}
+    b_{n} = \frac{20V}{\pi.(2k-1)}  
+\end{equation}
+
+De lo anterior se puede ver que sobreviven solo aquellos t\'erminos de la serie cuyo m\'ultiplo de la frecuencia fundamental es impar. Usando los coeficientes de Fourier podemos observar la presencia de cada uno de los arm\'onicos (son todos impares), y se superpuso esta informaci\'on con el gr\'afico de amplitud del diagrama de BODE teórico. De esta forma, y calculando la funci\'on transferencia para sucesivos arm\'onicos, se observa que a frecuencias altas la baja amplitud de los arm\'onicos combinado con el bajo valor de la funci\'on transferencia nos permiten despreciar la presencia de dichos arm\'onicos.
+
 
 \begin{figure}[H]
     \centering
