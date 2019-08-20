@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.8.9)  19 AUG 2019 21:37
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.8.9)  19 AUG 2019 21:41
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -2010,7 +2010,7 @@ File: ./EJ2/EJ2_integrador.png Graphic file (type png)
 Package pdftex.def Info: ./EJ2/EJ2_integrador.png  used on input line 93.
 (pdftex.def)             Requested size: 435.32422pt x 349.45311pt.
 
-LaTeX Warning: Reference `fig: noise_2' on page 11 undefined on input line 98.
+LaTeX Warning: Reference `fig:noise_2' on page 11 undefined on input line 98.
 
 <./EJ2/EJ2_rta_alta_frec.png, id=58, 1027.84pt x 825.0825pt>
 File: ./EJ2/EJ2_rta_alta_frec.png Graphic file (type png)
@@ -2038,10 +2038,10 @@ LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
  ) 
 Here is how much of TeX's memory you used:
- 50949 strings out of 494847
- 1232718 string characters out of 6179081
+ 50950 strings out of 494847
+ 1232732 string characters out of 6179081
  1552618 words of memory out of 5000000
- 53287 multiletter control sequences out of 15000+600000
+ 53288 multiletter control sequences out of 15000+600000
  700191 words of font info for 269 fonts, out of 8000000 for 9000
  59 hyphenation exceptions out of 8191
  66i,12n,111p,10493b,1005s stack positions out of 5000i,500n,10000p,200000b,80000s

@@ -26,7 +26,7 @@ Una vez seleccionados los componentes se arm\'o el circuito y se lo someti\'o a 
     \centering
     \includegraphics[width=0.9\textwidth]{./EJ2/EJ2_respuesta_a_cuadrada.png}
     \caption{Respuesta a una se\~nal cuadrada}
-    \label{fig: rtacuad_2} 
+    \label{fig:rtacuad_2} 
 \end{figure}
 
 En la figura \ref{fig: rtacuad_2} se puede observar una forma curva en los flancos ascendientes y descendientes de la respuesta del sistema a la se\~nal cuadrada (curva resaltada en celeste). Esto se debe principalmente a los intervalos de carga y descarga del capacitor, ante la inversi\'on de polaridad en sus bornes, obteniendo ese efecto de "suavizaci\'on". Adem\'as, desde el punto de vista espectral podemos apreciar una atenuaci\'on en los arm\'onicos altos que componen la se\~nal cuadrada, debido a que esta entrada est\'a pasando por un filtro pasa-bajos. Esto tambi\'en contribuye en la distorsi\'on en la forma de la se\~nal.
@@ -57,7 +57,7 @@ La frecuencia de corte "real" del circuito fue obtenida usando el osciloscopio, 
     \centering
     \includegraphics[width=0.9\textwidth]{./EJ2/EJ2_fase_osc.png}
     \caption{Medici\'on de frecuencia de corte}
-    \label{fig: phase_2} 
+    \label{fig:phase_2} 
 \end{figure}
 Adem\'as, el diagrama BODE resultante de las mediciones es compatible con el an\'alisis te\'orico sobre el filtro.
 
@@ -69,14 +69,14 @@ De esta forma, y calculando la funci\'on transferencia para cada arm\'onico, se 
     \centering
     \includegraphics[width=0.9\textwidth]{./EJ2/EJ2_BODE_teorico.png}
     \caption{Diagrama BODE de amplitud te\'orico y medido y amplitud de arm\'onicos de entrada}
-    \label{fig: bode_amp_superp_2} 
+    \label{fig:bode_amp_superp_2} 
 \end{figure}
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.9\textwidth]{./EJ2/EJ2_fase_BODE.png}
     \caption{Diagrama BODE de fase te\'orico y medido}
-    \label{fig: bode_phase_superp_2} 
+    \label{fig:bode_phase_superp_2} 
 \end{figure}
 
 \subsection{Comportamiento en alta frecuencia}
@@ -92,16 +92,16 @@ Lo que en transformada de Laplace implicar\'ia la integraci\'on de la se\~nal de
     \centering
     \includegraphics[width=0.9\textwidth]{./EJ2/EJ2_integrador.png}
     \caption{Respuesta a 250kHz}
-    \label{fig: altafrec_2} 
+    \label{fig:altafrec_2} 
 \end{figure}
 
- Si ahora probamos una frecuencia mucho mayor (en este caso $10MHz$) observamos una atenuaci\'on de la se\~nal de salida considerable, lo que produce que la salida sea susceptible de ser afectada por el ruido, como se puede ver en la figura \ref{fig: noise_2}.
+ Si ahora probamos una frecuencia mucho mayor (en este caso $10MHz$) observamos una atenuaci\'on de la se\~nal de salida considerable, lo que produce que la salida sea susceptible de ser afectada por el ruido, como se puede ver en la figura \ref{fig:noise_2}.
  
  \begin{figure}[H]
     \centering
     \includegraphics[width=0.9\textwidth]{./EJ2/EJ2_rta_alta_frec.png}
     \caption{Respuesta a 10MHz}
-    \label{fig: noise_2}
+    \label{fig:noise_2}
 \end{figure}
  
 \section{Respuesta a $160Hz$}

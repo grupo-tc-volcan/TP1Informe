@@ -1,9 +1,9 @@
 # Fdb version 3
-["pdflatex"] 1566261444 "/home/joaco/Desktop/repos/TP1Informe/Informe.tex" "/home/joaco/Desktop/repos/TP1Informe/Informe.pdf" "Informe" 1566261444
+["pdflatex"] 1566261704 "/home/joaco/Desktop/repos/TP1Informe/Informe.tex" "/home/joaco/Desktop/repos/TP1Informe/Informe.pdf" "Informe" 1566261704
   "./EJ1/EJ1.tex" 1566258739 11824 5036e3a702f11ba99a1ba41b1e3b656a ""
   "./EJ1/PCB.png" 1566237761 42816 8d2661e62fee7f14fa5af46955f4eb52 ""
   "./EJ1/latex_ext.tex" 1566258739 3339 eaf24a1f2df5ce14a66ea0f7ee07f550 ""
-  "./EJ2/EJ2.tex" 1566261440 6406 a9ab449f7452492a8c34702396ccb6b9 ""
+  "./EJ2/EJ2.tex" 1566261700 6399 208201baa9d535da3e70dc9674accd43 ""
   "./EJ2/EJ2_BODE_teorico.png" 1566258516 50344 d32eeaaa18b9d1d03fc4ef56757d2c6a ""
   "./EJ2/EJ2_fase_BODE.png" 1566260428 573845 5be77a9dc3f726c597e65bfcb6facdc2 ""
   "./EJ2/EJ2_fase_osc.png" 1566238372 60991 5d17fdec87030c745ec41559f206cc9f ""
@@ -13,7 +13,7 @@
   "./EJ2/EJ2_rta_alta_frec.png" 1566238366 32305 29af463fa2c71cf61dcdf5d28d19679a ""
   "./preamble.tex" 1566258739 10936 f5fe80771ffcbaf21d10e9c645891007 ""
   "/etc/texmf/web2c/texmf.cnf" 1565374893 475 c0e671620eb5563b2130f56340a5fde8 ""
-  "/home/joaco/Desktop/repos/TP1Informe/Informe.aux" 1566261444 8 a94a2480d3289e625eea47cd1b285758 ""
+  "/home/joaco/Desktop/repos/TP1Informe/Informe.aux" 1566261704 8 a94a2480d3289e625eea47cd1b285758 ""
   "/home/joaco/Desktop/repos/TP1Informe/Informe.tex" 1566259101 678 dbef44fa9fce892f6de8001a91e25fd7 ""
   "/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc" 1480098666 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1511824771 3332 103109f5612ad95229751940c61aada0 ""
@@ -331,8 +331,8 @@
   "Informe.tex" 1566259101 678 dbef44fa9fce892f6de8001a91e25fd7 ""
   "preamble.tex" 1566258739 10936 f5fe80771ffcbaf21d10e9c645891007 ""
   (generated)
-  "/home/joaco/Desktop/repos/TP1Informe/Informe.pdf"
-  "Informe.aux"
   "Informe.pdf"
   "/home/joaco/Desktop/repos/TP1Informe/Informe.log"
+  "Informe.aux"
+  "/home/joaco/Desktop/repos/TP1Informe/Informe.pdf"
   "Informe.log"
